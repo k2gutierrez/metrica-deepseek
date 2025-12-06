@@ -7,4 +7,4 @@ source metrica/bin/activate
 
 pip3 install -r requirements
 
-streamlit run app_mejorado.py
+streamlit run nombre de archivo

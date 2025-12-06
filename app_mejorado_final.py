@@ -718,60 +718,60 @@ with st.sidebar:
         
         with st.expander("Binomio 1 - Ingresos", expanded=True):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            #cols = st.columns(5)
             nuevos_crec_b1 = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params['crecimiento_ingresos_binomio1'][i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"ing_b1_a{año}"
-                    )
-                    nuevos_crec_b1.append(nuevo_valor / 100)
+            for i in range(5):
+                #with col:
+                año = i + 1
+                valor_actual = params['crecimiento_ingresos_binomio1'][i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"ing_b1_a{año}"
+                )
+                nuevos_crec_b1.append(nuevo_valor / 100)
         
         with st.expander("Binomio 2 - Ingresos", expanded=False):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            # cols = st.columns(5)
             nuevos_crec_b2 = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params['crecimiento_ingresos_binomio2'][i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"ing_b2_a{año}"
-                    )
-                    nuevos_crec_b2.append(nuevo_valor / 100)
+            for i in range(5):
+                
+                año = i + 1
+                valor_actual = params['crecimiento_ingresos_binomio2'][i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"ing_b2_a{año}"
+                )
+                nuevos_crec_b2.append(nuevo_valor / 100)
         
         with st.expander("General - Ingresos", expanded=False):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            #cols = st.columns(5)
             nuevos_crec_gen = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params['crecimiento_ingresos_general'][i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"ing_gen_a{año}"
-                    )
-                    nuevos_crec_gen.append(nuevo_valor / 100)
+            for i in range(5):
+                #with col:
+                año = i + 1
+                valor_actual = params['crecimiento_ingresos_general'][i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"ing_gen_a{año}"
+                )
+                nuevos_crec_gen.append(nuevo_valor / 100)
         
         st.markdown("---")
         
@@ -783,60 +783,60 @@ with st.sidebar:
         
         with st.expander("Binomio 1 - Costos", expanded=False):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            #cols = st.columns(5)
             nuevos_crec_c1 = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params.get('crecimiento_costos_binomio1', [0.10, 0.08, 0.07, 0.06, 0.05])[i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"cos_b1_a{año}"
-                    )
-                    nuevos_crec_c1.append(nuevo_valor / 100)
+            for i in range(5):
+                #with col:
+                año = i + 1
+                valor_actual = params.get('crecimiento_costos_binomio1', [0.10, 0.08, 0.07, 0.06, 0.05])[i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"cos_b1_a{año}"
+                )
+                nuevos_crec_c1.append(nuevo_valor / 100)
         
         with st.expander("Binomio 2 - Costos", expanded=False):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            #cols = st.columns(5)
             nuevos_crec_c2 = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params.get('crecimiento_costos_binomio2', [0.08, 0.07, 0.06, 0.05, 0.04])[i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"cos_b2_a{año}"
-                    )
-                    nuevos_crec_c2.append(nuevo_valor / 100)
+            for i in range(5):
+                #with col:
+                año = i + 1
+                valor_actual = params.get('crecimiento_costos_binomio2', [0.08, 0.07, 0.06, 0.05, 0.04])[i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"cos_b2_a{año}"
+                )
+                nuevos_crec_c2.append(nuevo_valor / 100)
         
         with st.expander("General - Costos", expanded=False):
             st.markdown("**Tasa de crecimiento anual (%)**")
-            cols = st.columns(5)
+            #cols = st.columns(5)
             nuevos_crec_cgen = []
-            for i, col in enumerate(cols):
-                with col:
-                    año = i + 1
-                    valor_actual = params.get('crecimiento_costos_general', [0.04, 0.03, 0.03, 0.02, 0.02])[i] * 100
-                    nuevo_valor = st.number_input(
-                        f"A{año}",
-                        min_value=-50.0,
-                        max_value=100.0,
-                        value=float(valor_actual),
-                        step=1.0,
-                        format="%.1f",
-                        key=f"cos_gen_a{año}"
-                    )
-                    nuevos_crec_cgen.append(nuevo_valor / 100)
+            for i in range(5):
+                #with col:
+                año = i + 1
+                valor_actual = params.get('crecimiento_costos_general', [0.04, 0.03, 0.03, 0.02, 0.02])[i] * 100
+                nuevo_valor = st.number_input(
+                    f"Año {año}",
+                    min_value=-0.0,
+                    max_value=100.0,
+                    value=float(valor_actual),
+                    step=0.5,
+                    format="%.1f",
+                    key=f"cos_gen_a{año}"
+                )
+                nuevos_crec_cgen.append(nuevo_valor / 100)
         
         # Botón para actualizar todos los parámetros
         if st.button("🔄 ACTUALIZAR SIMULACIÓN COMPLETA", type="primary", use_container_width=True):
